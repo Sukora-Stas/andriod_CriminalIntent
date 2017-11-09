@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.UUID;
 
 
-
 public class Crime {
 
     private UUID mid;
@@ -14,6 +13,7 @@ public class Crime {
 
     public Crime() {
         mid = UUID.randomUUID();
+        mDate = new Date();
     }
 
     public String getTitle() {
