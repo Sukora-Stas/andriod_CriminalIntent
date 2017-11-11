@@ -51,17 +51,21 @@ public class CrimeFragment extends Fragment {
         });
 
         mDateButton = (Button) v.findViewById(R.id.crime_date);
-        mDateButton.setText(mCrime.getDate().toString());
+        if (mDateButton != null) {
+            mDateButton.setText(mCrime.getDate().toString());
 //        Log.v("Date: ",mCrime.getDate().toString());
-        mDateButton.setEnabled(false);
+            mDateButton.setEnabled(false);
+        }
 
         mSolvedCheckBox = (CheckBox) v.findViewById(R.id.crime_solved);
-        mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCrime.setSolved(isChecked);
-            }
-        });
+        if (mSolvedCheckBox != null) {
+            mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    mCrime.setSolved(isChecked);
+                }
+            });
+        }
 
         return v;
     }
