@@ -34,7 +34,7 @@ public class Crime {
         mTitle = title;
     }
 
-    public UUID getMid() {
+    public UUID getId() {
         return mid;
     }
 
