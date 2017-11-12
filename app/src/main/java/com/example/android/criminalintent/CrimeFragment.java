@@ -53,6 +53,7 @@ public class CrimeFragment extends Fragment {
         mDateButton = (Button) v.findViewById(R.id.crime_date);
         if (mDateButton != null) {
             mDateButton.setText(mCrime.getDate().toString());
+            mDateButton.setText(mCrime.getDateFormat());
 //        Log.v("Date: ",mCrime.getDate().toString());
             mDateButton.setEnabled(false);
         }
