@@ -59,6 +59,13 @@ public class CrimeListFragment extends Fragment {
             mSolvedCheckBox = (CheckBox)
                     itemView.findViewById(R.id.list_item_crime_solved_check_box);
         }
+
+        public void bindCrime(Crime crime) {
+            mCrime = crime;
+            mTitleTextView.setText(mCrime.getTitle());
+            mDateTextView.setText(mCrime.getDateFormat());
+            mSolvedCheckBox.setChecked(mCrime.isSolved());
+        }
     }
 
     private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {

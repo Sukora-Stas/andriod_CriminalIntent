@@ -38,14 +38,6 @@ public class Crime {
         return mid;
     }
 
-    public Date getDate() {
-        return mDate;
-    }
-
-    public void setDate(Date date) {
-        mDate = date;
-    }
-
     public boolean isSolved() {
         return mSolved;
     }
