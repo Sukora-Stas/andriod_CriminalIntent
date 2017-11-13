@@ -21,7 +21,7 @@ public class Crime {
 //        mDateFormat = DateFormat.getDateInstance().format(mDate);
 
 //        mDateFormat = DateFormat.getDateInstance(DateFormat.FULL,  Locale.ENGLISH).format(mDate);
-        mDateFormat = new SimpleDateFormat("EEEE, MMM d, yyyy", Locale.ENGLISH).format(mDate);
+        mDateFormat = new SimpleDateFormat("EEEE, MMM d, yyyy  -  HH:mm:ss", Locale.ENGLISH).format(mDate);
 
     }
 
