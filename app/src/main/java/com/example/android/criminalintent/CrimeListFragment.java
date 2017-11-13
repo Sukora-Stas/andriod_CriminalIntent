@@ -47,6 +47,24 @@ public class CrimeListFragment extends Fragment {
         public CrimeAdapter(List<Crime> crimes) {
             mCrimes = crimes;
         }
+
+        @Override
+        public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+            View view = layoutInflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+            return new CrimeHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(CrimeHolder holder, int position) {
+            Crime crime = mCrimes.get(position);
+            holder.mTitleTextView.setText(crime.getTitle());
+        }
+
+        @Override
+        public int getItemCount() {
+            return mCrimes.size();
+        }
     }
 
 
