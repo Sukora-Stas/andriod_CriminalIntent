@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:hint="@string/crime_title_hint"/>
+        android:hint="@string/crime_title_hint"
+        android:inputType="text"/>
 
     <TextView
         style="?android:listSeparatorTextViewStyle"
