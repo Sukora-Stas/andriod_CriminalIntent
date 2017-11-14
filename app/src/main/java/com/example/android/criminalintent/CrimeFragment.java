@@ -39,6 +39,7 @@ public class CrimeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_crime, container, false);
 
         mTittleField = (EditText) v.findViewById(R.id.crime_title);
+        mTittleField.setText(mCrime.getTitle());
         mTittleField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -65,6 +66,7 @@ public class CrimeFragment extends Fragment {
         }
 
         mSolvedCheckBox = (CheckBox) v.findViewById(R.id.crime_solved);
+        mSolvedCheckBox.setChecked(mCrime.isSolved());
         if (mSolvedCheckBox != null) {
             mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
