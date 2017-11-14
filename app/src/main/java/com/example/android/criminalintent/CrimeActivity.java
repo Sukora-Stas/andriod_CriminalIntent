@@ -4,15 +4,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 import java.util.UUID;
 
-public class CrimeActivity extends FragmentActivity {
+public class CrimeActivity extends SingleFragmentActivity {
 
-    public static final String EXTRA_CRIME_ID =
+    private static final String EXTRA_CRIME_ID =
             "com.example.android.criminalintent.crime_id";
+
+    @Override
+    protected Fragment createFragment() {
+        UUID crimeId = (UUID) getIntent()
+                .getSerializableExtra(EXTRA_CRIME_ID);
+        return CrimeFragment.newInstance(crimeId);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
