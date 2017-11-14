@@ -13,7 +13,6 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Created by Sukora Stas on 12.11.2017.
@@ -44,7 +43,7 @@ public class CrimeListFragment extends Fragment {
             mAdapter = new CrimeAdapter(crimes);
             mCrimeRecyclerView.setAdapter(mAdapter);
         } else {
-            UUID crimeId = (UUID) getArguments().getSerializable(CrimeFragment.ARG_CRIME_ID);
+            //UUID crimeId = (UUID) getArguments().getSerializable(CrimeFragment.ARG_CRIME_ID);
             //mAdapter.notifyItemChanged();
             mAdapter.notifyDataSetChanged();
         }
