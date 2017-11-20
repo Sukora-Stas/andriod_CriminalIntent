@@ -70,6 +70,8 @@ public class CrimeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager manager = getFragmentManager();
+                DatePickerFragment dialog = new DatePickerFragment();
+                dialog.show(manager, DIALOG_DATE);
             }
         });
 
