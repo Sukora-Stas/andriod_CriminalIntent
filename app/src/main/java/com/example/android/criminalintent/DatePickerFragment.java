@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.DatePicker;
 
+import java.util.Date;
+
 /**
  * Created by Sukora Stas on 20.11.2017.
  */
@@ -18,6 +20,14 @@ public class DatePickerFragment extends DialogFragment {
 
     private DatePicker mDatePicker;
 
+    public static DatePickerFragment newInstance(Date date) {
+        Bundle args = new Bundle();
+        args.putSerializable(ARG_DATE, date);
+
+        DatePickerFragment fragment = new DatePickerFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @NonNull
     @Override
