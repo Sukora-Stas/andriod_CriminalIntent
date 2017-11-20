@@ -118,6 +118,6 @@ public class CrimeFragment extends Fragment {
     }
 
     private void updateDate() {
-        mDateButton.setText(mCrime.getDateFormat());
+        mDateButton.setText(mCrime.getDate().toString());
     }
 }
