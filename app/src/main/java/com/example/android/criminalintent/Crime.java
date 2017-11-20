@@ -53,4 +53,12 @@ public class Crime {
     public void setDateFormat(String dateFormat) {
         mDateFormat = dateFormat;
     }
+
+    public Date getDate() {
+        return mDate;
+    }
+
+    public void setDate(Date date) {
+        mDate = date;
+    }
 }
