@@ -7,12 +7,18 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.DatePicker;
 
 /**
  * Created by Sukora Stas on 20.11.2017.
  */
 
 public class DatePickerFragment extends DialogFragment {
+    private static final String ARG_DATE = "date";
+
+    private DatePicker mDatePicker;
+
+
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
