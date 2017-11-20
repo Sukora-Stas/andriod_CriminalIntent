@@ -1,6 +1,5 @@
 package com.example.android.criminalintent;
 
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -61,9 +60,8 @@ public class CrimeFragment extends Fragment {
         });
 
         mDateButton = (Button) v.findViewById(R.id.crime_date);
-        if (mDateButton != null) {
-            mDateButton.setText(mCrime.getDateFormat());
-        }
+        //if mdate!=null
+        updateDate();
 
         mDateButton.setOnClickListener(new View.OnClickListener() {
 
@@ -96,5 +94,9 @@ public class CrimeFragment extends Fragment {
         CrimeFragment fragment = new CrimeFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    private void updateDate() {
+        mDateButton.setText(mCrime.getDateFormat());
     }
 }
